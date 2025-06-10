@@ -1,54 +1,93 @@
-# Starlight Starter Kit: Basics
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secure Preview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+<header class="site-header">
+  <img src="logo.png" alt="Company Logo" class="logo">
+  <h1 class="title">Document Verification Portal</h1>
+</header>
 
-```
-npm create astro@latest -- --template starlight
-```
+  <div id="login-screen">
+    <div class="login-box">
+      <h2>Access Verification</h2>
+      <input type="password" id="password" placeholder="Enter Access Key">
+      <button onclick="checkPassword()">Unlock</button>
+      <p id="error-message"></p>
+    </div>
+  </div>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/withastro/starlight&create_from_path=examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
+  <div id="main-content" style="display:none;">
+    <header>
+      <img src="logo.png" alt="Site Logo" class="logo">
+      <h1>Paige Spiranac Vacation</h1>
+    </header>
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+    <div class="qr-section">
+      <img src="qr.png" alt="QR Code" class="qr">
+      <p class="scan-status">QR Verified ✓</p>
+    </div>
 
-## 🚀 Project Structure
+    <div class="info-box">
+      <p><strong>Timestamp:</strong> June 10, 2025 – 14:35 UTC</p>
+      <p><strong>Status:</strong> ✅ Verified | ID: VTX-2049-AZ</p>
+      <img src="badge.png" alt="Verification Badge" class="badge">
+    </div>
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+<header class="site-header">
+  <img src="logo.png" alt="Logo" class="logo">
+  <div class="org-name">Paige Spiranac Vacation</div>
+  <nav>
+    <a href="#">Verify</a> | <a href="#">Documents</a> | <a href="#">Support</a>
+  </nav>
+</header>
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   ├── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+<div class="timestamp">
+  Session started: <span id="session-time"></span>
+</div>
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+<footer class="verified-footer">
+  <img src="badge.png" alt="Verified" class="badge-icon">
+  <span>Document #A-103928 | Verified by SecureVault Authority</span>
+</footer>
 
-Static assets, like favicons, can be placed in the `public/` directory.
 
-## 🧞 Commands
+<div class="qr-section">
+  <img src="qr.png" alt="Scan QR" title="Scan to verify authenticity">
+</div>
 
-All commands are run from the root of the project, from a terminal:
+<div class="pdf-toolbar">
+  <span>📄 Document.pdf</span> | <span>Status: Verified</span>
+</div>
+<iframe src="document.pdf" class="pdf-viewer"></iframe>
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+<div class="badge">
+  <img src="badge.png" />
+  <span>Verified Secure</span>
+</div>
 
-## 👀 Want to learn more?
+<button onclick="alert('Document hash matched ✅\nRecord confirmed in ledger.')" class="verify-btn">🔍 Verify Authenticity</button>
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+<a href="#" onclick="alert('Confidential Document. Do not distribute.');">View Terms</a>
+
+    <div class="pdf-section">
+      <h2>Document Preview</h2>
+      <iframe src="document.pdf" width="100%" height="600px" style="border:1px solid #ccc;"></iframe>
+    </div>
+
+    <footer>
+      <p>© 2025 Verified Secure Preview</p>
+    </footer>
+  </div>
+
+<a href="document.pdf" download class="download-btn">⬇ Download Verified Document</a>
+
+</body>
+</html>
